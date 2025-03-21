@@ -2,7 +2,7 @@
     background-color: var(--cor-azul);
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 999999;
     width: 100%;
     max-width: 1300px;
     margin: auto;
@@ -44,7 +44,7 @@
 
 .Header .Perfil {
     position: fixed !important;
-    top: 60px;
+    top: 65px;
     border: 0;
     right: 30px;
     width: 100%;
