@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-preta: #000;
+  --cor-branca: #fff;
+  --cor-azul: #0b4d9c;
+  --cor-do-texto: #555555;
+  --fundo-do-site: #eeeeee;
+  --cor-cinza: #dcdcdcd7;
+  --cor-cinza-a: #f2f2f2d7;
+  --cor-do-titulo-preto: #000;
+  --cor-do-titulo-brnco: #fff;
+  --cor-vermelha: #d80000;
+  --borda-azul: 1px solid var(--cor-azul);
+  --borda-vermelha: 1px solid #d80000;
+}
+
+html {
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--fundo-do-site);
+  font-family: "Manrope", Arial, sans-serif;
+  color: var(--cor-do-texto);
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+main {
+  margin-top: 60px;
+}
+
+.PaddingInline {
+  padding-inline: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-do-texto);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+}
+
+.LinhaX {
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-cinza);
+}
+
+.Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+}
