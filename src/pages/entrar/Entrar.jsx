@@ -6,6 +6,7 @@ import "./Entrar.css";
 import logo from "../../../public/logo.webp";
 
 const usuarios = [
+    { usuario: "1234", senha: "0000" },
     { usuario: "123.456.789.012", senha: "Senha@2025" },
     { usuario: "987.654.321.098", senha: "Exemplo#2025" },
     { usuario: "321.654.987.765", senha: "Teste!2025" }
