@@ -92,7 +92,8 @@
     padding: 10px 0 20px 0;
 }
 
-.Header .Perfil nav ul li a {
+.Header .Perfil nav ul li a,
+.Header .Perfil nav ul li button {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -110,18 +111,90 @@
     font-size: 1.4em;
 }
 
-.Header .Perfil nav ul li .Sair {
+.Header .Perfil nav ul li button {
     justify-content: center;
     border-radius: 5px;
     border: var(--borda-azul);
     margin-inline: 20px;
     margin-top: 10px;
+    width: 100%;
+    max-width: 220px;
+    cursor: pointer;
 
     &:hover {
         background-color: var(--cor-vermelha);
         color: var(--cor-branca);
         border: var(--borda-vermelha);
     }
+}
+
+.Header .Popover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000004c;
+    backdrop-filter: blur(4px);
+}
+
+.Header .Popover .Box {
+    background-color: var(--cor-branca);
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+
+    p {
+        color: var(--cor-preta);
+    }
+}
+
+.Header .Popover .Box .Info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header .Popover .Box .Info .Icon {
+    background-color: var(--cor-vermelha-tranparent);
+    font-size: 1.4em;
+    color: var(--cor-vermelha);
+    padding: 8px;
+    border: 1px solid #f6c1c1;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+
+    & svg {
+        transform: translate(-1px, -1px);
+    }
+}
+
+.Header .Popover .Box .Btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.Header .Popover .Box .Btn button {
+    background-color: var(--cor-vermelha);
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--cor-branca);
+    cursor: pointer;
+}
+
+.Header .Popover .Box .Btn button:nth-child(2) {
+    background-color: var(--cor-azul);
 }
 
 .MenuMobile {
@@ -252,6 +325,10 @@
 }
 
 @media screen and (max-width: 289px) {
+    .Header .Popover .Box .Btn {
+        flex-direction: column;
+    }
+
     .MenuMobile {
         max-width: 250px;
     }

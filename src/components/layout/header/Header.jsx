@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { CiUser, CiMail, CiBellOn, CiViewTimeline, CiCircleQuestion, CiSettings, CiGrid41, CiAlignBottom } from "react-icons/ci";
+import { Link, useNavigate } from "react-router-dom";
+import { CiUser, CiMail, CiBellOn, CiViewTimeline, CiCircleQuestion, CiSettings, CiGrid41, CiAlignBottom, CiWarning } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { HiMenuAlt4 } from "react-icons/hi";
@@ -10,6 +10,8 @@ import user_1 from "../../../assets/image/usuarios/user_1.webp";
 function Header() {
     const [mostrarPerfil, setMostrarPerfil] = useState(false);
     const [mostrarMenuMobile, setMostrarMenuMobile] = useState(false);
+    const [mostrarPopover, setMostrarPopover] = useState(false);
+    const navigate = useNavigate();
 
     const togglePerfil = () => {
         setMostrarPerfil((prev) => !prev);
@@ -17,6 +19,12 @@ function Header() {
 
     const toggleMenuMobile = () => {
         setMostrarMenuMobile((prev) => !prev);
+    };
+
+    const confirmarSaida = () => {
+        localStorage.removeItem("usuarioLogado");
+        setMostrarPopover(false);
+        navigate("/Entrar");
     };
 
     useEffect(() => {
@@ -78,9 +86,30 @@ function Header() {
                             <li><Link to="#"><div className="Icon"><CiViewTimeline /></div><p>Documentos Úteis</p></Link></li>
                             <li><Link to="#"><div className="Icon"><CiCircleQuestion /></div><p>FAQ</p></Link></li>
                             <li><Link to="#"><div className="Icon"><CiSettings /></div><p>Configurações</p></Link></li>
-                            <li><Link className="Sair" to="#">Sair</Link></li>
+                            <li><button onClick={() => setMostrarPopover(true)}>Sair</button></li>
                         </ul>
                     </nav>
+                </div>
+            )}
+
+            {/* Popover de confirmação */}
+            {mostrarPopover && (
+                <div className="Popover PaddingInline">
+
+                    <div className="Box">
+                        <div className="Info">
+                            <div className="Icon">
+                                <CiWarning />
+                            </div>
+                            <p>Tem certeza que deseja sair?</p>
+                        </div>
+                        <div className="Btn">
+                            <button onClick={confirmarSaida}>Sair</button>
+                            <button onClick={() => setMostrarPopover(false)}>Cancelar</button>
+                        </div>
+                    </div>
+
+
                 </div>
             )}
 
