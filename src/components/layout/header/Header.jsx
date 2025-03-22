@@ -44,6 +44,7 @@ function Header() {
 
     return (
         <header className="Header PaddingInline">
+
             <nav className="Links">
                 <Link to="/" className="Logo">Sigeun <span>v1.0</span></Link>
 
@@ -121,9 +122,9 @@ function Header() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="#" className="TipoLink">
+                            <Link to="/" className="TipoLink" onClick={toggleMenuMobile} aria-label="Ver página de Dashboard">
                                 <div className="Icon"><CiGrid41 /></div>
-                                <p>Dashboard</p>
+                                <p> Dashboard </p>
                             </Link>
                         </li>
                         <li>
@@ -133,14 +134,14 @@ function Header() {
                                     <p>Portal do Estudante</p>
                                 </summary>
                                 <ul className="Lista">
-                                    <li><Link to="#">Notas de Frequência</Link></li>
-                                    <li><Link to="#">Exames</Link></li>
-                                    <li><Link to="#">Situação Financeira</Link></li>
-                                    <li><Link to="#">Avaliação do Corpo Docente</Link></li>
-                                    <li><Link to="#">Inscrições</Link></li>
-                                    <li><Link to="#">Horários</Link></li>
-                                    <li><Link to="#">Material Acadêmico</Link></li>
-                                    <li><Link to="#">Pagamento de Emolumentos</Link></li>
+                                    <li><Link to="/NotasDeFrequencia" onClick={toggleMenuMobile} aria-label="Ver página de Notas de Frequência"> Notas de Frequência </Link></li>
+                                    <li><Link to="/Exames" onClick={toggleMenuMobile} aria-label="Ver página de Exames"> Exames </Link></li>
+                                    <li><Link to="/SituacaoFinanceira" onClick={toggleMenuMobile} aria-label="Ver página de Situação Financeira"> Situação Financeira </Link></li>
+                                    <li><Link to="/AvalicaoDoCorpoDocente" onClick={toggleMenuMobile} aria-label="Ver página de Avaliação do Corpo Docente"> Avaliação do Corpo Docente </Link></li>
+                                    <li><Link to="/Inscricoes" onClick={toggleMenuMobile} aria-label="Ver página de Inscrições"> Inscrições </Link></li>
+                                    <li><Link to="/Horarios" onClick={toggleMenuMobile} aria-label="Ver página de Horários"> Horários </Link></li>
+                                    <li><Link to="MaterialAcademico" onClick={toggleMenuMobile} aria-label="Ver página de Material Acadêmico"> Material Acadêmico </Link></li>
+                                    <li><Link to="/PagamentoDeEmulamentos" onClick={toggleMenuMobile} aria-label="Ver página de Pagamento de Emolumentos"> Pagamento de Emolumentos </Link></li>
                                 </ul>
                             </details>
                         </li>

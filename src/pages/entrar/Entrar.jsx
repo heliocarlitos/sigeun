@@ -6,10 +6,7 @@ import "./Entrar.css";
 import logo from "../../../public/logo.webp";
 
 const usuarios = [
-    { usuario: "1234", senha: "0000" },
-    { usuario: "123.456.789.012", senha: "Senha@2025" },
-    { usuario: "987.654.321.098", senha: "Exemplo#2025" },
-    { usuario: "321.654.987.765", senha: "Teste!2025" }
+    { usuario: "08.0791.2017", senha: "SenhaTestes@1" }
 ];
 
 function Entrar() {
@@ -22,17 +19,17 @@ function Entrar() {
     useEffect(() => {
         const usuarioLogado = localStorage.getItem("usuarioLogado");
         if (usuarioLogado) {
-            navigate("/DashBoard");
+            navigate("/");
         }
     }, [navigate]);
 
     const validarUsuario = (valor) => {
-        const regex = /^\d{3}\.\d{3}\.\d{3}\.\d{3}$/;
+        const regex = /^\d{2}\.\d{4}\.\d{4}$/;
         return regex.test(valor);
     };
 
     const validarSenha = (valor) => {
-        const regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?àáãâéêíõôúü])(?=.*\d).{6,}$/;
+        const regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?àçáãâéêíõôúü])(?=.*\d).{6,}$/;
         return regex.test(valor);
     };
 
@@ -51,7 +48,7 @@ function Entrar() {
         if (encontrado) {
             setSucesso(true);
             localStorage.setItem("usuarioLogado", JSON.stringify(encontrado));
-            setTimeout(() => navigate("/DashBoard"), 2000);
+            setTimeout(() => navigate("/"), 2000);
         } else {
             setErro(true);
         }
