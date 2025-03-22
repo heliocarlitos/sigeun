@@ -222,6 +222,8 @@
 }
 
 @media screen and (min-width: 850px) {
+
+    .MenuMobile,
     .Header .Links .Btn .BtnMenuMobile {
         display: none;
     }
