@@ -35,7 +35,7 @@ function Spinner() {
         loading && (
             <section className="SeccaoDeSpinner">
                 <figure>
-                    <img src={spinner} alt="Spinner" width={120} height={120} fetchPriority="high" />
+                    <img src={spinner} alt="Spinner" width={128} height={128} fetchPriority="high" />
                 </figure>
             </section>
         )

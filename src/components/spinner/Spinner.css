@@ -10,3 +10,6 @@
     top: 65px;
     left: 0;
 }
+.SeccaoDeSpinner figure {
+    transform: translateY(-65px);
+}
