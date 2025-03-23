@@ -16,7 +16,7 @@ import PagamentoDeEmulamentos from './pages/pagamentodeemulamentos/PagamentoDeEm
 import DadosPessoais from './pages/dadospessoais/DadosPessoais';
 import Mensagem from './pages/mensagem/Mensagem';
 import Notificacoes from './pages/notificacoes/Notificacoes';
-import DocumentosUteis from './pages/documentosUteis/DocumentosUteis';
+import DocumentosUteis from './pages/documentosuteis/DocumentosUteis';
 import Faq from './pages/faq/Faq';
 import Configuracoes from './pages/configuracoes/Configuracoes';
 
