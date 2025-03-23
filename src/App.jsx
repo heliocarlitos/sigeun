@@ -13,6 +13,12 @@ import Inscricoes from './pages/inscricoes/Inscricoes';
 import Horarios from './pages/horarios/Horarios';
 import MaterialAcademico from './pages/materialacademico/MaterialAcademico';
 import PagamentoDeEmulamentos from './pages/pagamentodeemulamentos/PagamentoDeEmulamentos';
+import DadosPessoais from './pages/dadospessoais/DadosPessoais';
+import Mensagem from './pages/mensagem/Mensagem';
+import Notificacoes from './pages/notificacoes/Notificacoes';
+import DocumentosUteis from './pages/documentosUteis/DocumentosUteis';
+import Faq from './pages/faq/Faq';
+import Configuracoes from './pages/configuracoes/Configuracoes';
 
 function App() {
 
@@ -41,6 +47,12 @@ function App() {
             <Route path="/Horarios" element={<Horarios />} />
             <Route path="/MaterialAcademico" element={<MaterialAcademico />} />
             <Route path="/PagamentoDeEmulamentos" element={<PagamentoDeEmulamentos />} />
+            <Route path="/DadosPessoais" element={<DadosPessoais />} />
+            <Route path="/Mensagem" element={<Mensagem />} />
+            <Route path="/Notificacoes" element={<Notificacoes />} />
+            <Route path="/DocumentosUteis" element={<DocumentosUteis />} />
+            <Route path="/Faq" element={<Faq />} />
+            <Route path="/Configuracoes" element={<Configuracoes />} />
 
           </Routes>
 

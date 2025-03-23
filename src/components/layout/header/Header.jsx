@@ -85,12 +85,12 @@ function Header() {
                     <div className="LinhaX"></div>
                     <nav>
                         <ul>
-                            <li><a href="#"><div className="Icon"><CiUser /></div><p>Dados pessoais</p></a></li>
-                            <li><a href="#"><div className="Icon"><CiMail /></div><p>Mensagem</p></a></li>
-                            <li><a href="#"><div className="Icon"><CiBellOn /></div><p>Notificações</p></a></li>
-                            <li><a href="#"><div className="Icon"><CiViewTimeline /></div><p>Documentos Úteis</p></a></li>
-                            <li><a href="#"><div className="Icon"><CiCircleQuestion /></div><p>FAQ</p></a></li>
-                            <li><a href="#"><div className="Icon"><CiSettings /></div><p>Configurações</p></a></li>
+                            <li><a href="/DadosPessoais"><div className="Icon"><CiUser /></div><p>Dados pessoais</p></a></li>
+                            <li><a href="/Mensagem"><div className="Icon"><CiMail /></div><p>Mensagem</p></a></li>
+                            <li><a href="/Notificacoes"><div className="Icon"><CiBellOn /></div><p>Notificações</p></a></li>
+                            <li><a href="/DocumentosUteis"><div className="Icon"><CiViewTimeline /></div><p>Documentos Úteis</p></a></li>
+                            <li><a href="/Faq"><div className="Icon"><CiCircleQuestion /></div><p>FAQ</p></a></li>
+                            <li><a href="/Configuracoes"><div className="Icon"><CiSettings /></div><p>Configurações</p></a></li>
                             <li><button onClick={() => setMostrarPopover(true)}>Sair</button></li>
                         </ul>
                     </nav>
