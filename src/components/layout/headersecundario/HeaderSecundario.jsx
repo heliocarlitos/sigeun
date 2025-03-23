@@ -1,5 +1,5 @@
 import "./HeaderSecundario.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CiGrid41, CiAlignBottom } from "react-icons/ci";
 
 function HeaderSecundario() {
@@ -17,7 +17,7 @@ function HeaderSecundario() {
                     <ul>
 
                         <li>
-                            <a href="/" aria-label="Ver página de Dashboard" className="TipoLink">
+                            <Link to="/" aria-label="Ver página de Dashboard" className="TipoLink">
 
                                 <div className="Icon">
                                     <CiGrid41 />
@@ -25,7 +25,7 @@ function HeaderSecundario() {
 
                                 <p> Dashboard </p>
 
-                            </a>
+                            </Link>
                         </li>
 
                         <li>
@@ -43,21 +43,21 @@ function HeaderSecundario() {
 
                                 <ul className="Lista">
 
-                                    <li><a href="/NotasDeFrequencia" aria-label="Vert página de  Notas de Frequência"> Notas de Frequência </a></li>
+                                    <li><Link to="/NotasDeFrequencia" aria-label="Vert página de  Notas de Frequência"> Notas de Frequência </Link></li>
 
-                                    <li><a href="/Exames" aria-label="Vert página de Exames"> Exames </a></li>
+                                    <li><Link to="/Exames" aria-label="Vert página de Exames"> Exames </Link></li>
 
-                                    <li><a href="/SituacaoFinanceira" aria-label="Vert página de Situação Financeira"> Situação Financeira </a></li>
+                                    <li><Link to="/SituacaoFinanceira" aria-label="Vert página de Situação Financeira"> Situação Financeira </Link></li>
 
-                                    <li><a href="/AvalicaoDoCorpoDocente" aria-label="Vert página de  Avaliação do Corpo Docente"> Avaliação do Corpo Docente </a></li>
+                                    <li><Link to="/AvalicaoDoCorpoDocente" aria-label="Vert página de  Avaliação do Corpo Docente"> Avaliação do Corpo Docente </Link></li>
 
-                                    <li><a href="/Inscricoes" aria-label="Vert página de Inscrições"> Inscrições </a></li>
+                                    <li><Link to="/Inscricoes" aria-label="Vert página de Inscrições"> Inscrições </Link></li>
 
-                                    <li><a href="/Horarios" aria-label="Vert página de Horários"> Horários </a></li>
+                                    <li><Link to="/Horarios" aria-label="Vert página de Horários"> Horários </Link></li>
 
-                                    <li><a href="MaterialAcademico" aria-label="Vert página de Material Acadêmico"> Material Acadêmico </a></li>
+                                    <li><Link to="MaterialAcademico" aria-label="Vert página de Material Acadêmico"> Material Acadêmico </Link></li>
 
-                                    <li><a href="/PagamentoDeEmulamentos" aria-label="Vert página de Pagamento de Emolumentos"> Pagamento de Emolumentos </a></li>
+                                    <li><Link to="/PagamentoDeEmulamentos" aria-label="Vert página de Pagamento de Emolumentos"> Pagamento de Emolumentos </Link></li>
 
                                 </ul>
 

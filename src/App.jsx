@@ -19,7 +19,7 @@ import Notificacoes from './pages/notificacoes/Notificacoes';
 import DocumentosUteis from './pages/documentosuteis/DocumentosUteis';
 import Faq from './pages/faq/Faq';
 import Configuracoes from './pages/configuracoes/Configuracoes';
-
+import Spinner from "../src/components/spinner/Spinner"
 function App() {
 
   return (
@@ -27,7 +27,6 @@ function App() {
     <Router>
 
       <VerificarLogin />
-
       <section className="Raiz">
 
         <Header />
@@ -35,6 +34,7 @@ function App() {
         <div className="Transgressor"></div>
 
         <main>
+        <Spinner />
 
           <Routes>
             <Route path="/Entrar" element={<Entrar />} />

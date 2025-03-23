@@ -47,7 +47,7 @@ function Header() {
 
             <nav className="Links">
 
-                <a href="/" className="Logo">Sigeun <span>v1.0</span></a>
+                <Link to="/" className="Logo">Sigeun <span>v1.0</span></Link>
 
                 <div className="Btn">
 
@@ -85,12 +85,12 @@ function Header() {
                     <div className="LinhaX"></div>
                     <nav>
                         <ul>
-                            <li><a href="/DadosPessoais"><div className="Icon"><CiUser /></div><p>Dados pessoais</p></a></li>
-                            <li><a href="/Mensagem"><div className="Icon"><CiMail /></div><p>Mensagem</p></a></li>
-                            <li><a href="/Notificacoes"><div className="Icon"><CiBellOn /></div><p>Notificações</p></a></li>
-                            <li><a href="/DocumentosUteis"><div className="Icon"><CiViewTimeline /></div><p>Documentos Úteis</p></a></li>
-                            <li><a href="/Faq"><div className="Icon"><CiCircleQuestion /></div><p>FAQ</p></a></li>
-                            <li><a href="/Configuracoes"><div className="Icon"><CiSettings /></div><p>Configurações</p></a></li>
+                            <li><Link to="/DadosPessoais"><div className="Icon"><CiUser /></div><p>Dados pessoais</p></Link></li>
+                            <li><Link to="/Mensagem"><div className="Icon"><CiMail /></div><p>Mensagem</p></Link></li>
+                            <li><Link to="/Notificacoes"><div className="Icon"><CiBellOn /></div><p>Notificações</p></Link></li>
+                            <li><Link to="/DocumentosUteis"><div className="Icon"><CiViewTimeline /></div><p>Documentos Úteis</p></Link></li>
+                            <li><Link to="/Faq"><div className="Icon"><CiCircleQuestion /></div><p>FAQ</p></Link></li>
+                            <li><Link to="/Configuracoes"><div className="Icon"><CiSettings /></div><p>Configurações</p></Link></li>
                             <li><button onClick={() => setMostrarPopover(true)}>Sair</button></li>
                         </ul>
                     </nav>
@@ -136,12 +136,12 @@ function Header() {
                     <ul>
 
                         <li>
-                            <a href="/" className="TipoLink" onClick={toggleMenuMobile} aria-label="Ver página de Dashboard">
+                            <Link to="/" className="TipoLink" onClick={toggleMenuMobile} aria-label="Ver página de Dashboard">
                                 <div className="Icon"><CiGrid41 /></div>
 
                                 <p> Dashboard </p>
 
-                            </a>
+                            </Link>
                         </li>
 
                         <li>
@@ -158,21 +158,21 @@ function Header() {
 
                                 <ul className="Lista">
 
-                                    <li><a href="/NotasDeFrequencia" onClick={toggleMenuMobile} aria-label="Ver página de Notas de Frequência"> Notas de Frequência </a></li>
+                                    <li><Link to="/NotasDeFrequencia" onClick={toggleMenuMobile} aria-label="Ver página de Notas de Frequência"> Notas de Frequência </Link></li>
 
-                                    <li><a href="/Exames" onClick={toggleMenuMobile} aria-label="Ver página de Exames"> Exames </a></li>
+                                    <li><Link to="/Exames" onClick={toggleMenuMobile} aria-label="Ver página de Exames"> Exames </Link></li>
 
-                                    <li><a href="/SituacaoFinanceira" onClick={toggleMenuMobile} aria-label="Ver página de Situação Financeira"> Situação Financeira </a></li>
+                                    <li><Link to="/SituacaoFinanceira" onClick={toggleMenuMobile} aria-label="Ver página de Situação Financeira"> Situação Financeira </Link></li>
 
-                                    <li><a href="/AvalicaoDoCorpoDocente" onClick={toggleMenuMobile} aria-label="Ver página de Avaliação do Corpo Docente"> Avaliação do Corpo Docente </a></li>
+                                    <li><Link to="/AvalicaoDoCorpoDocente" onClick={toggleMenuMobile} aria-label="Ver página de Avaliação do Corpo Docente"> Avaliação do Corpo Docente </Link></li>
 
-                                    <li><a href="/Inscricoes" onClick={toggleMenuMobile} aria-label="Ver página de Inscrições"> Inscrições </a></li>
+                                    <li><Link to="/Inscricoes" onClick={toggleMenuMobile} aria-label="Ver página de Inscrições"> Inscrições </Link></li>
 
-                                    <li><a href="/Horarios" onClick={toggleMenuMobile} aria-label="Ver página de Horários"> Horários </a></li>
+                                    <li><Link to="/Horarios" onClick={toggleMenuMobile} aria-label="Ver página de Horários"> Horários </Link></li>
 
-                                    <li><a href="MaterialAcademico" onClick={toggleMenuMobile} aria-label="Ver página de Material Acadêmico"> Material Acadêmico </a></li>
+                                    <li><Link to="MaterialAcademico" onClick={toggleMenuMobile} aria-label="Ver página de Material Acadêmico"> Material Acadêmico </Link></li>
 
-                                    <li><a href="/PagamentoDeEmulamentos" onClick={toggleMenuMobile} aria-label="Ver página de Pagamento de Emolumentos"> Pagamento de Emolumentos </a></li>
+                                    <li><Link to="/PagamentoDeEmulamentos" onClick={toggleMenuMobile} aria-label="Ver página de Pagamento de Emolumentos"> Pagamento de Emolumentos </Link></li>
 
                                 </ul>
 
