@@ -9,7 +9,6 @@
     z-index: 999999999;
     top: 65px;
     left: 0;
-    display: none;
 }
 
 .spinner {
@@ -17,6 +16,7 @@
     position: relative;
     width: 15.7px;
     height: 15.7px;
+   transform: translateY(-65px);
 }
 
 .spinner div {
