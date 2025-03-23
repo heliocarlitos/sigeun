@@ -1,0 +1,335 @@
+.Header {
+    background-color: var(--cor-azul);
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.Header .Links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 15px;
+}
+
+.Header .Links .Logo {
+    color: var(--cor-branca);
+    text-transform: uppercase;
+
+    span {
+        text-transform: lowercase;
+        font-size: .5em;
+    }
+}
+
+.Header .Links .Btn {
+    display: flex;
+    gap: 20px;
+}
+
+.Header .Links .Btn .BtnMenuMobile {
+    font-size: 1.4em;
+    cursor: pointer;
+    display: none;
+}
+
+.Header .Links button,
+.Header img {
+    border-radius: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    color: var(--cor-branca);
+}
+
+.Header .Perfil .LinhaX {
+    margin-inline: 20px;
+    max-width: 220px;
+}
+
+.Header .Perfil {
+    position: fixed !important;
+    top: 70px;
+    border: 0;
+    right: 30px;
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-branca);
+    box-shadow: -3px 3px 20px 0 #00000016;
+}
+
+.Header .Perfil .Info {
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    gap: 10px;
+}
+
+.Header .Perfil .Info img {
+    border: 1px solid var(--cor-azul);
+    cursor: default;
+}
+
+.Header .Perfil .Info .NomeDoUsuario {
+    color: var(--cor-do-titulo-preto);
+    font-weight: 600;
+}
+
+.Header .Perfil .Info .Usuario {
+    font-size: .9em;
+}
+
+.Header .Perfil nav ul {
+    list-style: none;
+    padding: 10px 0 20px 0;
+}
+
+.Header .Perfil nav ul li a,
+.Header .Perfil nav ul li button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 35px;
+    padding-inline: 20px;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+    }
+}
+
+.Header .Perfil nav ul li a .Icon {
+    display: flex;
+    font-size: 1.4em;
+}
+
+.Header .Perfil nav ul li button {
+    justify-content: center;
+    border-radius: 5px;
+    border: var(--borda-azul);
+    margin-inline: 20px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 220px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--cor-vermelha);
+        color: var(--cor-branca);
+        border: var(--borda-vermelha);
+    }
+}
+
+.Header .Popover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000004c;
+    backdrop-filter: blur(4px);
+}
+
+.Header .Popover .Box {
+    background-color: var(--cor-branca);
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+
+    p {
+        color: var(--cor-preta);
+    }
+}
+
+.Header .Popover .Box .Info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header .Popover .Box .Info .Icon {
+    background-color: var(--cor-vermelha-tranparent);
+    font-size: 1.4em;
+    color: var(--cor-vermelha);
+    padding: 8px;
+    border: 1px solid #f6c1c1;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+
+    & svg {
+        transform: translate(-1px, -1px);
+    }
+}
+
+.Header .Popover .Box .Btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.Header .Popover .Box .Btn button {
+    background-color: var(--cor-vermelha);
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    color: var(--cor-branca);
+    cursor: pointer;
+}
+
+.Header .Popover .Box .Btn button:nth-child(2) {
+    background-color: var(--cor-azul);
+}
+
+.MenuMobile {
+    background-color: var(--cor-branca);
+    padding-block: 20px;
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    position: fixed;
+    box-shadow: -3px 3px 20px 0 #00000016;
+    right: -30px;
+    border-radius: 10px;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    gap: 10px;
+    top: 70px;
+}
+
+.MenuMobile.ativo {
+    transform: translateX(-50px);
+}
+
+.MenuMobile .Titulo {
+    text-transform: uppercase;
+    color: var(--cor-preta);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+
+.MenuMobile nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.MenuMobile nav ul,
+.MenuMobile nav ul li details summary {
+    list-style: none;
+}
+
+.MenuMobile nav ul .TipoLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-inline: 20px;
+    height: 40px;
+    color: var(--cor-preta);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+    }
+
+    .Icon {
+        font-size: 1.5em;
+    }
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+
+.MenuMobile nav ul li details .Lista {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MenuMobile nav ul li details .Lista li {
+    display: flex;
+    align-items: center;
+}
+
+.MenuMobile nav ul li details .Lista li a {
+    padding-block: 5px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-inline: 15px;
+    width: 85%;
+    transform: translateX(20px);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+        color: var(--cor-preta);
+    }
+}
+
+@media screen and (min-width: 850px) {
+
+    .MenuMobile,
+    .Header .Links .Btn .BtnMenuMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .Header .Links .Btn .BtnMenuMobile {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .MenuMobile.ativo {
+        transform: translateX(-40px);
+    }
+}
+
+@media screen and (max-width: 353px) {
+    .MenuMobile {
+        max-width: 270px;
+    }
+
+    .MenuMobile nav ul li details .Lista {
+        margin-left: -10px;
+    }
+}
+
+@media screen and (max-width: 289px) {
+    .Header .Popover .Box .Btn {
+        flex-direction: column;
+    }
+
+    .MenuMobile {
+        max-width: 250px;
+    }
+}

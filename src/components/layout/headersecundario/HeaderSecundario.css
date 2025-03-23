@@ -1,0 +1,95 @@
+.HeaderSecundario {
+    background-color: var(--cor-branca);
+    padding-block: 30px;
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: static;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    position: fixed;
+    box-shadow: -3px 3px 20px 0 #00000016;
+    height: 100dvh;
+    left: 0;
+}
+
+.HeaderSecundario .Titulo {
+    text-transform: uppercase;
+    color: var(--cor-preta);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+
+.HeaderSecundario nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderSecundario nav ul,
+.HeaderSecundario nav ul li details summary {
+    list-style: none;
+}
+
+.HeaderSecundario nav ul .TipoLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-inline: 30px;
+    height: 45px;
+    color: var(--cor-preta);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+    }
+
+    .Icon {
+        font-size: 1.5em;
+    }
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+
+.HeaderSecundario nav ul li details .Lista {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.HeaderSecundario nav ul li details .Lista li {
+    display: flex;
+    align-items: center;
+}
+
+.HeaderSecundario nav ul li details .Lista li a {
+    padding-block: 5px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding-inline: 15px;
+    width: 85%;
+    transform: translateX(20px);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+        color: var(--cor-preta);
+    }
+}
+
+@media screen and (max-width:850px) {
+    .HeaderSecundario {
+        display: none;
+    }
+}

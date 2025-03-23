@@ -1,0 +1,169 @@
+.Entrar {
+    background: var(--cor-branca) url(../../assets/image/relativas/fundo_estudantes.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    height: 100dvh;
+    z-index: 999999;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: right;
+}
+
+.Entrar .Formulario {
+    background-color: var(--cor-branca);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100dvh;
+}
+
+.Entrar .Formulario .Titulo {
+    color: var(--cor-preta);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Entrar .Formulario figure img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.Entrar .Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.Entrar .Formulario form .Notificacoes {
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin-top: -20px;
+
+    p {
+        position: absolute;
+    }
+}
+
+.Entrar .Formulario form .Notificacoes .Erro {
+    color: var(--cor-vermelha);
+}
+
+.Entrar .Formulario form .Notificacoes .Sucesso {
+    color: var(--cor-verde);
+}
+
+.Entrar .Formulario form .InputBox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+.Entrar .Formulario form .InputBox .Icon {
+    position: absolute;
+    transform: translateX(15px);
+    font-size: 1.4em;
+    color: var(--cor-preta);
+}
+
+.Entrar .Formulario form .InputBox input {
+    padding: 10px 10px 10px 50px;
+    height: 55px;
+}
+
+.Entrar .Formulario form .InputButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Entrar .Formulario form .InputButton button {
+    background-color: var(--cor-azul-claro);
+    color: var(--cor-branca);
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--cor-azul);
+    }
+}
+
+.Entrar .Formulario form .InputButton ul {
+    list-style: none;
+}
+
+.Entrar .Formulario form .InputButton a {
+    &:hover {
+        color: var(--cor-azul-claro);
+        text-decoration: underline;
+    }
+}
+
+.Entrar .Formulario .CopyRi {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    text-align: center;
+    background-color: #ffffffb1;
+    color: var(--cor-preta);
+    padding: 10px;
+    border-radius: 5px;
+    border: var(--borda-branca);
+}
+
+@media screen and (max-width: 750px) {
+    .Entrar {
+        background: var(--cor-branca);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Entrar .Formulario {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .Entrar .Formulario .Titulo {
+        margin-bottom: 10px;
+    }
+
+    .Entrar .Formulario form .Notificacoes {
+        margin-top: 3px;
+    }
+
+    .Entrar .Formulario .CopyRi {
+        position: relative;
+        text-align: center;
+        color: var(--cor-preta);
+        padding: 0;
+        left: 0;
+        bottom: 0px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .Entrar .Formulario figure img {
+        max-width: 200px;
+    }
+}
