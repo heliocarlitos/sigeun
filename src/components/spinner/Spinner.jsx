@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Spinner.css";
+import spinner from '../../assets/image/gif/spinner.gif';
 
 function Spinner() {
     const [loading, setLoading] = useState(true);
@@ -33,13 +34,9 @@ function Spinner() {
     return (
         loading && (
             <section className="SeccaoDeSpinner">
-                <div className="spinner">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+                <figure>
+                    <img src={spinner} alt="Spinner" width={120} height={120} fetchPriority="high" />
+                </figure>
             </section>
         )
     );
