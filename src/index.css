@@ -2,10 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Manrope", Arial, sans-serif;
 }
 
 :root {
-  --cor-preta: #000;
+  --cor-preta: #000000;
   --cor-branca: #fff;
   --cor-azul: #0b4d9c;
   --cor-azul-claro: #3599d4;
@@ -55,7 +56,7 @@ main {
   padding-top: 80px;
   background: var(--cor-branca) url("/logo_png_transparent.webp") no-repeat center center;
   background-size: 600px;
-  height: 100dvh;
+  /* height: 100dvh; */
 }
 
 .Transgressor {

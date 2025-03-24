@@ -8,7 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    transition: background-image 5s ease-in-out;
+    transition: background-image 2s ease-in-out;
     backdrop-filter: blur(20px);
 }
 

@@ -1,0 +1,7 @@
+.TituloDaPagina{
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 10px;
+    color: var(--cor-preta);
+}

@@ -1,0 +1,215 @@
+.DadosPessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.DadosPessoais .Dados {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.DadosPessoais .c-dados {
+    gap: 25px;
+    background-color: var(--cor-branca);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    box-shadow: -5px 5px 15px 0 #00000016;
+}
+
+.DadosPessoais .Dados .Bloco {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: var(--cor-branca);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    box-shadow: -5px 5px 15px 0 #00000016;
+}
+
+.DadosPessoais .Dados .c-bloco {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.DadosPessoais .Dados .Bloco .Titulo,
+.DadosPessoais .Dados .c-bloco .Titulo {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--cor-preta);
+}
+
+.DadosPessoais .Dados .Bloco .Caixa,
+.DadosPessoais .Dados .c-bloco .Caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa figure img {
+    border-radius: 100px;
+    width: 120px;
+    height: auto;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .Btn .InputFile {
+    display: none;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .Btn input,
+.DadosPessoais .Dados .Bloco .Caixa .Btn .FileLabel,
+.DadosPessoais .Dados .Bloco .Caixa .Btn .ResetButton {
+    width: 100px;
+    border-radius: 10px;
+    transition: .2s ease;
+    cursor: pointer;
+    border: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &:hover {
+        border: 0;
+    }
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .Btn .FileLabel {
+    background-color: var(--cor-azul-claro);
+    color: var(--cor-branca);
+
+    &:hover {
+        background-color: var(--cor-azul);
+    }
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .Btn .ResetButton {
+    background-color: var(--cor-vermelha-tranparent);
+    color: var(--cor-vermelha);
+
+    &:hover {
+        background-color: var(--cor-vermelha);
+        color: var(--cor-branca);
+    }
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .InputBox,
+.DadosPessoais .Dados .c-bloco .Caixa .InputBox {
+    width: 100%;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .InputBox label,
+.DadosPessoais .Dados .c-bloco .Caixa .InputBox label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .InputBox input,
+.DadosPessoais .Dados .c-bloco .Caixa .InputBox input {
+    background-color: transparent;
+    border: var(--borda-fina);
+    height: 45px;
+    padding: 0 20px;
+    border-radius: 8px;
+}
+
+.DadosPessoais .Dados .Bloco .Caixa .InputBox .Desativado,
+.DadosPessoais .Dados .c-bloco .Caixa .InputBox .Desativado {
+    cursor: not-allowed;
+    background-color: #eaeaea;
+}
+
+.DadosPessoais .BtnSalvar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.DadosPessoais .BtnSalvar button {
+    background-color: var(--cor-vermelha);
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: cente;
+    align-items: center;
+    transition: .2s ease;
+
+    &:nth-child(1) {
+        background-color: var(--cor-azul-claro);
+        color: var(--cor-branca);
+
+        &:hover {
+            background-color: var(--cor-azul);
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: var(--cor-vermelha-tranparent);
+        color: var(--cor-vermelha);
+
+        &:hover {
+            background-color: var(--cor-vermelha);
+            color: var(--cor-branca);
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .DadosPessoais .Dados {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 851px) {
+    .DadosPessoais .Dados {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .DadosPessoais .Dados {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .DadosPessoais .Dados .Bloco .Caixa .InputBox input,
+    .DadosPessoais .Dados .c-bloco .Caixa .InputBox input {
+        padding: 0 15px;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 265px) {
+    .DadosPessoais .BtnSalvar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .DadosPessoais .BtnSalvar button {
+        width: 100%;
+    }
+}
