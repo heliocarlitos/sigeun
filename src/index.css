@@ -121,9 +121,11 @@ button {
   border: 0;
   font-size: 1em;
 }
-figure{
+
+figure {
   display: flex;
 }
+
 .LinhaX {
   width: 100%;
   height: 1px;

@@ -1,0 +1,35 @@
+.OsDocentes {
+    padding: 0;
+}
+
+.OsDocentes .TituloDaPagina {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.OsDocentes .CardDefault .Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width:400px) {
+
+    .OsDocentes .CardDefault .Container,
+    .OsDocentes .CardDefault,
+    .OsDocentes {
+        padding: 0;
+        gap: 10px;
+        margin: 0 0 0 0;
+        grid-gap: 10px;
+    }
+}
+
+@media screen and (max-width:260px) {
+    .OsDocentes .CardDefault .Container {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    }
+}

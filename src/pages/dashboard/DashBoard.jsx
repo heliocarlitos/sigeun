@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet";
+import AsDisciplinas from "../../components/asdisciplinas/AsDisciplinas";
+import OsDocentes from "../../components/osdocentes/OsDocentes";
+import "./DashBoard.css";
+
 function DashBoard() {
     return (
         <>
@@ -6,7 +10,10 @@ function DashBoard() {
                 <title> DashBoard | SIGEUN </title>
             </Helmet>
 
-            DashBoard
+            <section className="DashBoard">
+                <AsDisciplinas />
+                <OsDocentes />
+            </section>
         </>
     )
 }

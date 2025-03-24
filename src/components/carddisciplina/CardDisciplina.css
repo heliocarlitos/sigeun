@@ -1,0 +1,82 @@
+.CardDisciplina {
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+    transition: .2s ease;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+
+    &:hover {
+        box-shadow: none;
+        box-shadow: var(--sombra-de-2);
+    }
+
+    &:nth-child(1) {
+        background-color: #d8d6ff;
+    }
+
+    &:nth-child(2) {
+        background-color: #ffc5d6;
+    }
+
+    &:nth-child(3) {
+        background-color: #cae9d6;
+    }
+
+    &:nth-child(4) {
+        background-color: #f4f7fb;
+    }
+
+    &:nth-child(5) {
+        background-color: #ffeed6;
+    }
+
+    &:nth-child(6) {
+        background-color: #f7f9dc;
+    }
+
+    &:nth-child(7) {
+        background-color: #f1c4f1;
+    }
+
+    &:nth-child(8) {
+        background-color: #e0e0e0;
+    }
+
+    &:nth-child(9) {
+        background-color: #ffd8b1;
+    }
+
+    &:nth-child(10) {
+        background-color: #b5e7f7;
+    }
+
+    &:nth-child(11) {
+        background-color: #d0f0c0;
+    }
+
+    &:nth-child(12) {
+        background-color: #ffcad4;
+    }
+}
+
+.CardDisciplina .Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--cor-branca);
+    width: 50px;
+    height: 50px;
+    font-size: 2.1em;
+    box-shadow: var(--sombra-de-5);
+}
+
+.CardDisciplina .Titulo {
+    font-weight: 600;
+    line-height: 1.2;
+}
