@@ -73,16 +73,22 @@ function Header() {
             {/* Menu de perfil */}
             {mostrarPerfil && (
                 <div className="Perfil">
+
                     <div className="Info">
+
                         <figure>
                             <img src={user_1} width={35} height={35} alt="Foto de perfil" />
                         </figure>
+
                         <div className="Detalhes">
                             <p className="NomeDoUsuario">Hélio Carlitos António</p>
                             <p className="Usuario">08.0791.2027</p>
                         </div>
+
                     </div>
+
                     <div className="LinhaX"></div>
+
                     <nav>
                         <ul>
                             <li><Link to="/DadosPessoais"><div className="Icon"><CiUser /></div><p>Dados pessoais</p></Link></li>
@@ -94,6 +100,7 @@ function Header() {
                             <li><button onClick={() => setMostrarPopover(true)}>Sair</button></li>
                         </ul>
                     </nav>
+
                 </div>
             )}
 

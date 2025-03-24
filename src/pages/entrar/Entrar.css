@@ -1,13 +1,9 @@
 .Entrar {
-    background: var(--cor-branca) url(../../assets/image/relativas/fundo_estudantes.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     position: fixed;
-    height: 100dvh;
     z-index: 999999;
     top: 0;
-    left:0;
+    left: 0;
     display: flex;
     justify-content: right;
 }
@@ -16,7 +12,7 @@
     background-color: var(--cor-branca);
     padding: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,8 +109,10 @@
 }
 
 .Entrar .Formulario form .InputButton a {
+    color: var(--cor-azul-claro);
+
     &:hover {
-        color: var(--cor-azul-claro);
+        color: var(--cor-azul);
         text-decoration: underline;
     }
 }
@@ -133,7 +131,7 @@
 
 @media screen and (max-width: 750px) {
     .Entrar {
-        background: var(--cor-branca);
+        background: var(--cor-branca) !important;
         justify-content: center;
         align-items: center;
     }
@@ -162,8 +160,30 @@
     }
 }
 
+@media screen and (max-width: 750px) {
+    .Entrar .Formulario figure img {
+        max-width: 230px;
+    }
+
+    .Entrar .Formulario {
+        max-width: 900px;
+    }
+
+    .Entrar .Formulario form,
+    .Entrar .Formulario form .InputBox,
+    .Entrar .Formulario form .InputBox input {
+        max-width: 500px;
+    }
+}
+
 @media screen and (max-width: 380px) {
     .Entrar .Formulario figure img {
         max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .Entrar .Formulario form .InputButton button {
+        width: 100%;
     }
 }

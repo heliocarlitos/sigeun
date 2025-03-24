@@ -191,10 +191,20 @@
     border-radius: 5px;
     color: var(--cor-branca);
     cursor: pointer;
+    border: var(--borda-transparent);
+    transition: .1s ease;
 }
 
 .Header .Popover .Box .Btn button:nth-child(2) {
-    background-color: var(--cor-azul);
+    background-color: var(--cor-banca);
+    color: var(--cor-do-texto);
+    border: var(--borda-fina);
+
+    &:hover {
+        box-shadow: none;
+        color: var(--cor-preta);
+        border: var(--borda-suave);
+    }
 }
 
 .MenuMobile {

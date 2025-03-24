@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { CiUser, CiLock } from "react-icons/ci";
 import "./Entrar.css";
 import logo_png from "../../../public/logo_png.webp";
+import BackgroundSlideshow from "../../components/backgroundslideshow/BackgroundSlideshow";
 
 const usuarios = [
     { usuario: "08.0791.2017", senha: "SenhaTestes@1" }
@@ -60,7 +61,12 @@ function Entrar() {
                 <title> Entrar | Sigeun </title>
             </Helmet>
 
+
             <section className="Entrar">
+
+            <BackgroundSlideshow />
+
+
                 <div className="Formulario">
                     <div className="Titulo">
                         <p> Sistema de Gestão Universitário </p>

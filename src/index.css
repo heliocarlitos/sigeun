@@ -24,7 +24,9 @@
   --borda-azul: 1px solid var(--cor-azul);
   --borda-azul-transparent: 1px solid var(--cor-azul-transparent);
   --borda-vermelha: 1px solid #d80000;
-  --borda-transparent: 1px solid transparent
+  --borda-transparent: 1px solid transparent;
+  --borda-fina: 1px solid #00000046;
+  --borda-suave: 1px solid #000000a0;
 }
 
 html {
