@@ -70,6 +70,10 @@
     gap: 20px;
 }
 
+.DadosPessoais .Dados .Bloco .Caixa .Texto {
+    text-align: center;
+}
+
 .DadosPessoais .Dados .Bloco .Caixa .Btn .InputFile {
     display: none;
 }
@@ -130,6 +134,10 @@
     height: 45px;
     padding: 0 20px;
     border-radius: 8px;
+
+    &:focus {
+        border: var(--borda-azul-claro);
+    }
 }
 
 .DadosPessoais .Dados .Bloco .Caixa .InputBox .Desativado,

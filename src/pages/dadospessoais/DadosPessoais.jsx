@@ -32,10 +32,13 @@ function DadosPessoais() {
             </Helmet>
 
             <section className="DadosPessoais">
+
                 <TituloDaPagina Titulo="Perfil do Usuário" />
 
                 <div className="Dados">
+
                     <div className="Bloco">
+
                         <div className="Titulo">
                             <p> Alterar foto </p>
                         </div>
@@ -45,33 +48,30 @@ function DadosPessoais() {
                         </div>
 
                         <div className="Caixa">
+
                             <figure>
                                 <img src={imagemPerfil} alt="Foto de perfil" width={100} height={100} loading="lazy" />
                             </figure>
 
                             <div className="Btn">
-                                <input
-                                    className="InputFile"
-                                    type="file"
-                                    accept="image/png, image/jpeg, image/gif"
-                                    name="fileInput"
-                                    id="fileInput"
-                                    onChange={handleImageChange}
-                                />
-                                <label className="FileLabel" htmlFor="fileInput">
-                                    <p> Carregar </p>
-                                </label>
+
+                                <input className="InputFile" type="file" accept="image/png, image/jpeg, image/gif" name="fileInput" id="fileInput" onChange={handleImageChange} />
+
+                                <label className="FileLabel" htmlFor="fileInput"> <p> Carregar </p> </label>
 
                                 <button type="button" className="ResetButton" onClick={resetImage}>
                                     Apagar
                                 </button>
+
                             </div>
 
                             <div className="Texto"> Formato JPG, PNG ou GIF. Máximo 30KB</div>
                         </div>
+
                     </div>
 
                     <div className="Bloco">
+
                         <div className="Titulo">
                             <p> Alterar Senha </p>
                         </div>
@@ -81,6 +81,7 @@ function DadosPessoais() {
                         </div>
 
                         <div className="Caixa">
+
                             <div className="InputBox">
                                 <label htmlFor="SenhaActual"> Senha atual </label>
                                 <input type="password" name="SenhaActual" id="SenhaActual" required />
@@ -95,17 +96,23 @@ function DadosPessoais() {
                                 <label htmlFor="ConNovaSenha"> Confirmar nova senha </label>
                                 <input type="password" name="ConNovaSenha" id="ConNovaSenha" required />
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
                 <div className="Dados c-dados">
+
                     <div className="c-bloco">
+
                         <div className="Titulo">
                             <p> Dados Pessoais </p>
                         </div>
 
                         <div className="Caixa">
+
                             <div className="InputBox">
                                 <label htmlFor="NomeCompleto"> Nome Completo </label>
                                 <input type="text" id="NomeCompleto" className="Desativado" disabled value="HÉLIO CARLITOS ANTÓNIO" />
@@ -138,17 +145,21 @@ function DadosPessoais() {
 
                             <div className="InputBox">
                                 <label htmlFor="Contacto"> Contacto </label>
-                                <input type="tel" id="Contacto" value="+258862867990" />
+                                <input type="tel" className="Desativado" disabled id="Contacto" value="+258862867990" />
                             </div>
+
                         </div>
+
                     </div>
 
                     <div className="c-bloco">
+
                         <div className="Titulo">
                             <p> Dados Acadêmicos </p>
                         </div>
 
                         <div className="Caixa">
+
                             <div className="InputBox">
                                 <label htmlFor="Extensao"> Extensão </label>
                                 <input type="text" id="Extensao" className="Desativado" disabled value="CABO DELGADO" />
@@ -183,14 +194,18 @@ function DadosPessoais() {
                                 <label htmlFor="CodigoUsuario"> Código de usuário </label>
                                 <input type="text" id="CodigoUsuario" className="Desativado" disabled value="08.0791.2017" />
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
 
                 <div className="BtnSalvar">
                     <button type="submit"> Salvar </button>
                     <button> Cancelar </button>
                 </div>
+
             </section>
         </>
     );
