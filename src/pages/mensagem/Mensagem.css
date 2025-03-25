@@ -10,7 +10,7 @@
 }
 
 .Mensagem .Campo .Bloco {
-    border-right: 1px solid #e7e7e7;
+    border-right: var(--borda-especial);
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -118,6 +118,11 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    transform: translateY(-50px);
+    height: 0;
 }
 
 .Mensagem .Campo .Bloco .BtnNovaMsg button {
@@ -129,17 +134,119 @@
     font-size: 2em;
     cursor: pointer;
     transition: var(--transicao-2ms);
-    box-shadow: -3px 3px 10px 0 #00000045;
+    box-shadow: var(--sombra-de-3);
 
     &:hover {
         background-color: var(--cor-azul);
         box-shadow: none;
-        transform: rotate(180deg);
     }
 
     &:active {
         background-color: var(--cor-azul-claro);
     }
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg {
+    position: absolute;
+    top: 0;
+    transform: translateY(-325px);
+    list-style: none;
+    background-color: var(--cor-branca);
+    border: var(--borda-especial);
+    display: block;
+    box-shadow: var(--sombra-de-2);
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 270px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg .Pesquisa {
+    padding: 7px 20px 7px 20px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg .Pesquisa .Icon {
+    position: absolute;
+    font-size: 1.3em;
+    transform: translateX(6px);
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg .Pesquisa input {
+    height: 35px;
+    font-size: .9em;
+    border-radius: 6px;
+    padding: 0 10px 0 30px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg nav {
+    height: 250px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--cor-cinza);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--cor-preta);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--cor-cinza-a);
+    }
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+        color: var(--cor-preta);
+    }
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a figure {
+    border-radius: 100px;
+    position: relative;
+    border: var(--borda-transparent);
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a .On {
+    &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: var(--cor-verde);
+        right: 0;
+        border-radius: 100px;
+    }
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a .TemStatus {
+    border: var(--borda-azul);
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a img {
+    border-radius: 100px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a .Nome {
+    font-weight: 500;
+    color: var(--cor-preta);
+    font-size: .9em;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg a .Codigo {
+    font-size: .8em;
 }
 
 .Mensagem .Campo .Conversas {
@@ -175,7 +282,7 @@
     }
 
     .Mensagem .Campo .Bloco {
-        border-right: 1px solid #e7e7e7;
+        border-right: var(--borda-especial);
         padding: 10px 30px 0 0;
     }
 
@@ -208,10 +315,18 @@
 
     .Mensagem .Campo .Bloco .BtnNovaMsg {
         right: 20px;
-        bottom: -10px;
+        bottom: 0;
     }
 
     .Mensagem .Campo .Conversas {
         display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Mensagem .Campo .Bloco .BtnNovaMsg .ListaNovaMsg nav {
+        &::-webkit-scrollbar {
+            width: 0;
+        }
     }
 }
