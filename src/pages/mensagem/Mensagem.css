@@ -116,14 +116,14 @@
 
 .Mensagem .Campo .Bloco .BtnNovaMsg {
     position: absolute;
-    right: 30px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
 }
 
 .Mensagem .Campo .Bloco .BtnNovaMsg button {
     background-color: var(--cor-azul-claro);
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     border-radius: 100px;
     color: var(--cor-branca);
     font-size: 2em;
@@ -207,8 +207,8 @@
     }
 
     .Mensagem .Campo .Bloco .BtnNovaMsg {
-        right: 10px;
-        bottom: 20px;
+        right: 20px;
+        bottom: -10px;
     }
 
     .Mensagem .Campo .Conversas {
