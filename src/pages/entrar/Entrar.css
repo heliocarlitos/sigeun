@@ -1,7 +1,7 @@
 .Entrar {
     width: 100%;
     position: fixed;
-    z-index: 999999;
+    z-index: 9999999999;
     top: 0;
     left: 0;
     display: flex;

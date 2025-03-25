@@ -1,0 +1,210 @@
+.Mensagem {
+    padding: 0 30px;
+    height: 500px;
+    min-height: 400px;
+}
+
+.Mensagem .Campo {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+.Mensagem .Campo .Bloco {
+    border-right: 1px solid #e7e7e7;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 30px 0 0;
+    position: relative;
+}
+
+.Mensagem .Campo .Bloco .Usuario {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.Mensagem .Campo .Bloco .Usuario .FotDetalhes {
+    display: flex;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Opcoes .Icon {
+    color: var(--cor-preta);
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    transition: var(--transicao-2ms);
+
+    &:hover {
+        background-color: var(--cor-azul-transparent);
+    }
+
+    &:active {
+        background-color: var(--cor-azul-claro);
+        color: var(--cor-branca);
+    }
+}
+
+.Mensagem .Campo .Bloco .Usuario img {
+    width: 55px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Nome {
+    color: var(--cor-preta);
+    font-weight: 500;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Cod-Usuario {
+    font-size: .9em;
+    display: none;
+}
+
+.Mensagem .Campo .Bloco .Usuario .StatusOn {
+    font-size: .9em;
+    color: var(--cor-verde);
+}
+
+.Mensagem .Campo .Bloco .Pesquisa {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.Mensagem .Campo .Bloco .Pesquisa .Icon {
+    position: absolute;
+    font-size: 1.5em;
+    transform: translateX(10px);
+}
+
+.Mensagem .Campo .Bloco .Pesquisa input {
+    padding: 0 10px 0 40px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: transparent;
+    border: var(--borda-fina);
+    transition: var(--transicao-2ms);
+
+    &:focus {
+        transition: var(--transicao-2ms);
+        border: var(--borda-azul-claro);
+    }
+}
+
+.Mensagem .Campo .Bloco .Men-Recentes {
+    font-weight: 600;
+}
+
+.Mensagem .Campo .Bloco .AsMensagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Mensagem .Campo .Bloco .AsMensagens .Caixa-vazia {
+    transform: translateY(-30px);
+    display: flex;
+    gap: 5px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.Mensagem .Campo .Bloco .BtnNovaMsg button {
+    background-color: var(--cor-azul-claro);
+    height: 45px;
+    width: 45px;
+    border-radius: 100px;
+    color: var(--cor-branca);
+    font-size: 2em;
+    cursor: pointer;
+    transition: var(--transicao-2ms);
+    box-shadow: -3px 3px 10px 0 #00000045;
+
+    &:hover {
+        background-color: var(--cor-azul);
+        box-shadow: none;
+        transform: rotate(180deg);
+    }
+
+    &:active {
+        background-color: var(--cor-azul-claro);
+    }
+}
+
+.Mensagem .Campo .Conversas {
+    width: 100%;
+}
+
+@media screen and (max-width:955px) {
+    .Mensagem .Campo {
+        flex-direction: column;
+    }
+
+    .Mensagem .Campo .Bloco {
+        border-right: none;
+        max-width: 100%;
+        padding: 10px 0 0 0;
+        height: 100%;
+    }
+
+    .Mensagem .Campo .Bloco .AsMensagens {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Mensagem .Campo .Conversas {
+        display: none;
+    }
+}
+
+@media screen and (max-width:851px) {
+    .Mensagem .Campo {
+        flex-direction: row;
+    }
+
+    .Mensagem .Campo .Bloco {
+        border-right: 1px solid #e7e7e7;
+        padding: 10px 30px 0 0;
+    }
+
+    .Mensagem .Campo .Conversas {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width:585px) {
+    .Mensagem {
+        height: 100dvh;
+    }
+
+    .Mensagem .Campo {
+        flex-direction: column;
+    }
+
+    .Mensagem .Campo .Bloco {
+        border-right: none;
+        max-width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    .Mensagem .Campo .Bloco .BtnNovaMsg {
+        right: 0;
+        bottom: 20px;
+    }
+
+    .Mensagem .Campo .Conversas {
+        display: none;
+    }
+}

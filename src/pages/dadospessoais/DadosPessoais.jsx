@@ -46,7 +46,7 @@ function DadosPessoais() {
 
                         <div className="Caixa">
                             <figure>
-                                <img src={imagemPerfil} alt="Foto de perfil" width={100} height={100} />
+                                <img src={imagemPerfil} alt="Foto de perfil" width={100} height={100} loading="lazy" />
                             </figure>
 
                             <div className="Btn">

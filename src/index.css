@@ -23,11 +23,18 @@
   --cor-do-text-placeholder-input: #807d7d;
   --borda-branca: 1px solid var(--cor-branca);
   --borda-azul: 1px solid var(--cor-azul);
+  --borda-azul-claro: 1px solid var(--cor-azul-claro);
   --borda-azul-transparent: 1px solid var(--cor-azul-transparent);
   --borda-vermelha: 1px solid #d80000;
   --borda-transparent: 1px solid transparent;
   --borda-fina: 1px solid #00000046;
   --borda-suave: 1px solid #000000a0;
+  --transicao-2ms: .2s ease;
+  --transicao-3ms: .3s ease;
+  --transicao-4ms: .4s ease;
+  --transicao-5ms: .5s ease;
+  --transicao-1s: 1s ease;
+  --transicao-5s: 5s ease;
 }
 
 html {
@@ -56,7 +63,6 @@ main {
   padding-top: 80px;
   background: var(--cor-branca) url("/logo_png_transparent.webp") no-repeat center center;
   background-size: 600px;
-  /* height: 100dvh; */
 }
 
 .Transgressor {
@@ -125,6 +131,14 @@ button {
   font-size: 1.3em;
 }
 
+.CardDefault {
+  background-color: var(--cor-branca);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  box-shadow: -5px 5px 15px 0 #00000016;
+}
+
 @media (max-width: 1198px) {
   .Raiz {
     gap: 40px;
@@ -176,6 +190,12 @@ button {
 @media (max-width: 550px) {
   main {
     background-size: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .CardDefault {
+    padding: 20px;
   }
 }
 
