@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { CiSearch, CiMenuKebab } from "react-icons/ci";
+import { CiSearch, CiMenuKebab, CiEdit, CiSettings, CiCircleQuestion, CiLogout } from "react-icons/ci";
 import { TfiDropbox } from "react-icons/tfi";
 import { useState, useRef, useEffect } from "react";
 import "./Mensagem.css";
@@ -18,16 +18,24 @@ import user_10 from "../../assets/image/usuarios/user_10.webp";
 
 function Mensagem() {
     const [isOpen, setIsOpen] = useState(false);
+    const [menuOpcoesAberto, setMenuOpcoesAberto] = useState(false);
     const menuRef = useRef(null);
+    const opcoesRef = useRef(null);
 
-    // Alternar visibilidade da lista
+    // Alternar visibilidade da lista de mensagens
     const toggleList = () => setIsOpen(!isOpen);
 
-    // Fecha a lista ao clicar fora
+    // Alternar visibilidade do menu de opções
+    const toggleOpcoes = () => setMenuOpcoesAberto(!menuOpcoesAberto);
+
+    // Fecha os menus ao clicar fora
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
                 setIsOpen(false);
+            }
+            if (opcoesRef.current && !opcoesRef.current.contains(event.target)) {
+                setMenuOpcoesAberto(false);
             }
         };
 
@@ -42,11 +50,15 @@ function Mensagem() {
             </Helmet>
 
             <section className="Mensagem CardDefault">
+
                 <div className="Campo">
+
                     <div className="Bloco">
+
                         <TituloDaPagina Titulo="Mensagens" />
 
                         <div className="Usuario">
+
                             <div className="FotDetalhes">
                                 <figure>
                                     <img src={user_1} loading="lazy" alt="Foto de perfil" width={50} height={50} />
@@ -57,12 +69,50 @@ function Mensagem() {
                                     <p className="Cod-Usuario"> 08.0791.2017 </p>
                                     <p className="StatusOn"> Online </p>
                                 </div>
+
                             </div>
 
-                            <div className="Opcoes">
-                                <button className="Icon">
+                            {/* Menu de Opções */}
+                            <div className="Opcoes" ref={opcoesRef}>
+
+                                <button className="Icon" onClick={toggleOpcoes}>
                                     <CiMenuKebab />
                                 </button>
+
+                                {menuOpcoesAberto && (
+                                    <div className="MenuOpcoes">
+
+                                        <Link to="/DadosPessoais">
+                                            <div className="Icon">
+                                                <CiEdit />
+                                            </div>
+                                            <p> Ver Perfil </p>
+                                        </Link>
+
+                                        <Link to="#">
+                                            <div className="Icon">
+                                                <CiSettings />
+                                            </div>
+                                            <p> Configurações </p>
+                                        </Link>
+
+                                        <Link to="#">
+                                            <div className="Icon">
+                                                <CiCircleQuestion />
+                                            </div>
+                                            <p> Ajuda </p>
+                                        </Link>
+
+                                        <Link to="#">
+                                            <div className="Icon">
+                                                <CiLogout />
+                                            </div>
+                                            <p> Sair </p>
+                                        </Link>
+
+                                    </div>
+                                )}
+
                             </div>
                         </div>
 
@@ -101,7 +151,6 @@ function Mensagem() {
                                     </div>
 
                                     <nav>
-
                                         <Link to="#">
                                             <figure className="On TemStatus">
                                                 <img src={user_2} alt="Foto de perfil" width={40} height={40} loading="lazy" />
@@ -191,16 +240,16 @@ function Mensagem() {
                                                 <p className="Codigo"> 08.1213.2017 </p>
                                             </div>
                                         </Link>
-
                                     </nav>
 
                                 </div>
                             )}
                         </div>
+
                     </div>
 
                     <div className="Conversas"></div>
-                    
+
                 </div>
             </section>
         </>

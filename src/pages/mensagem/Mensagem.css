@@ -49,6 +49,58 @@
     }
 }
 
+.Mensagem .Campo .Bloco .Usuario .Opcoes {
+    position: relative;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Opcoes .MenuOpcoes {
+    position: fixed;
+    transform: translate(-187px, -32px);
+    background-color: var(--cor-branca);
+    z-index: 1;
+    border: var(--borda-especial);
+    box-shadow: var(--sombra-de-2);
+    border-radius: 10px;
+    padding: 10px 0 0 0;
+    width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Opcoes .MenuOpcoes .Icon {
+    color: var(--cor-preta);
+    font-size: 1.4em;
+}
+
+.Mensagem .Campo .Bloco .Usuario .Opcoes .MenuOpcoes a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: var(--transicao-2ms);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+        color: var(--cor-preta);
+    }
+
+    &:nth-last-child(1) {
+        margin-top: 5px;
+        border-top: var(--borda-especial);
+
+        &:hover {
+            background-color: var(--cor-vermelha);
+            color: var(--cor-branca);
+
+            .Icon {
+                color: var(--cor-branca);
+            }
+        }
+    }
+}
+
 .Mensagem .Campo .Bloco .Usuario img {
     width: 55px;
     height: auto;
@@ -126,7 +178,7 @@
 }
 
 .Mensagem .Campo .Bloco .BtnNovaMsg button {
-    background-color: var(--cor-azul-claro);
+    background-color: var(--cor-azul);
     height: 50px;
     width: 50px;
     border-radius: 100px;
@@ -137,12 +189,13 @@
     box-shadow: var(--sombra-de-3);
 
     &:hover {
-        background-color: var(--cor-azul);
+        background-color: var(--cor-azul-claro);
         box-shadow: none;
+        transform: rotate(180deg);
     }
 
     &:active {
-        background-color: var(--cor-azul-claro);
+        background-color: var(--cor-azul);
     }
 }
 
