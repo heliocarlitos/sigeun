@@ -1,7 +1,6 @@
 .Mensagem {
     padding: 0 30px;
-    height: 500px;
-    min-height: 400px;
+    height: 85dvh;
 }
 
 .Mensagem .Campo {
@@ -29,6 +28,7 @@
 
 .Mensagem .Campo .Bloco .Usuario .FotDetalhes {
     display: flex;
+    gap: 10px;
 }
 
 .Mensagem .Campo .Bloco .Usuario .Opcoes .Icon {
@@ -185,8 +185,15 @@
 }
 
 @media screen and (max-width:585px) {
+    .CardDefault {
+        box-shadow: none;
+        border: 0;
+        margin-top: -10px;
+    }
+
     .Mensagem {
-        height: 100dvh;
+        height: 89dvh;
+        padding: 0;
     }
 
     .Mensagem .Campo {
@@ -200,7 +207,7 @@
     }
 
     .Mensagem .Campo .Bloco .BtnNovaMsg {
-        right: 0;
+        right: 10px;
         bottom: 20px;
     }
 
