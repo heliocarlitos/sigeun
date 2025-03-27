@@ -11,29 +11,24 @@
 }
 
 .DesempenhoEstudante .TituloDaPagina {
-    margin: 0 0  10px 20px;
+    margin: 0 0 10px 20px;
 }
 
 .DesempenhoEstudante .eixo-x text,
 .DesempenhoEstudante .eixo-y text,
 .DesempenhoEstudante .legenda-item {
-    /* font-size: 1em;
-    font-weight: 400; */
     fill: black !important;
-    /* Garantindo que o texto fique preto */
 }
 
 .DesempenhoEstudante .legenda-container {
     display: flex;
     justify-content: center;
     gap: 3px;
-    /* margin-top: 10px; */
 }
 
 .DesempenhoEstudante .legenda-item {
     display: flex;
     align-items: center;
-    /* gap: 5px; */
     cursor: text !important;
 }
 

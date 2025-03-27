@@ -50,7 +50,6 @@ body {
   font-family: "Manrope", Arial, sans-serif;
   color: var(--cor-do-texto);
   width: 100%;
-  max-width: 1500px;
   margin: auto;
 }
 
