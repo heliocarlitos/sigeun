@@ -1,0 +1,74 @@
+.DesempenhoEstudante {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    padding: 20px 20px 20px 0;
+    overflow-x: auto !important;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    border: var(--borda-especial);
+    box-shadow: var(--sombra-de-5);
+}
+
+.DesempenhoEstudante .TituloDaPagina {
+    margin: 0 0  10px 20px;
+}
+
+.DesempenhoEstudante .eixo-x text,
+.DesempenhoEstudante .eixo-y text,
+.DesempenhoEstudante .legenda-item {
+    /* font-size: 1em;
+    font-weight: 400; */
+    fill: black !important;
+    /* Garantindo que o texto fique preto */
+}
+
+.DesempenhoEstudante .legenda-container {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    /* margin-top: 10px; */
+}
+
+.DesempenhoEstudante .legenda-item {
+    display: flex;
+    align-items: center;
+    /* gap: 5px; */
+    cursor: text !important;
+}
+
+.DesempenhoEstudante .legenda-cor {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.DesempenhoEstudante .recharts-wrapper {
+    cursor: crosshair !important;
+}
+
+/* Estilizando o Tooltip */
+.DesempenhoEstudante .recharts-tooltip-wrapper {
+    background-color: white !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+    background-color: var(--cor-branca) !important;
+}
+
+.DesempenhoEstudante .recharts-tooltip-item {
+    color: var(--cor-preta) !important;
+    background-color: var(--cor-branca) !important;
+    border: 1px solid transparent !important;
+}
+
+@media screen and (max-width: 634px) {
+    .DesempenhoEstudante {
+        padding: 0;
+        border-radius: none;
+        border: none;
+        box-shadow: var(--sombra-de-5);
+        display: none;
+    }
+}
