@@ -1,0 +1,83 @@
+.Notificacoes {
+    padding: 0;
+    gap: 0;
+}
+
+.Notificacoes .TituloDaPagina {
+    padding: 20px;
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: .2s ease;
+    border-top: 1px solid var(--cor-cinza);
+
+    &:hover {
+        background-color: var(--cor-cinza-a);
+    }
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Detalhes .Titulo {
+    font-weight: bold;
+    color: var(--cor-preta);
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Detalhes .Texto {
+    line-height: 1.1;
+    font-size: .9em;
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Accao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Accao .Tempo {
+    font-size: .9em;
+}
+
+.Notificacoes .AsNotificacaoes .CardDeNotificacoes .Accao .Opcoes {
+    transform: rotate(90deg) translateX(-0px);
+    font-size: 1.2em;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: var(--cor-azul-transparent);
+    }
+
+    &:active {
+        background-color: var(--cor-azul-claro);
+        color: var(--cor-branca);
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .Notificacoes .TituloDaPagina {
+        padding: 0 0 10px 0;
+    }
+
+    .Notificacoes .AsNotificacaoes .CardDeNotificacoes {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Notificacoes .AsNotificacaoes .CardDeNotificacoes img {
+        width: 40px;
+        height: 40px;
+    }
+}
