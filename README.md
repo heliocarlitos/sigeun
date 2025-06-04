@@ -18,6 +18,16 @@
 
 Este projecto é uma especie de sugestão de melhoria do Sistema de Gestão Universidade Rovuma (SIGEUR), na qual eu fiz a minha licenciatura. Quando comecei a estudar os conceitos de UI/UX e um pouco sobre acessibilidade performace e SEO, como desenvolvedor web, percebi que o SIGEUR apresenta alguns problemas em relação a esses pontos importantes quando se trata de desenvolvimento de aplicação e/ou sistemas web. Então me desafiei a fazer do zero absoluto uma update focando nestes posntos criticos. O projecto ainda está em ANDAMENTO.
 
+> [!IMPORTANT]
+> Usuário:
+>  ```
+> 08.0791.2017
+> ```
+> Senha:
+> ```
+>SenhaTestes@1
+> ```
+
 ## Features
 
 - [x] Página de login
